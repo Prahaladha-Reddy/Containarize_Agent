@@ -1,0 +1,12 @@
+services:
+    app_1:
+        image: pyapp
+        ports:
+            - 3000:8000
+        command: python -m http.server 8000
+    app_2:
+        image: pyapp
+        ports:
+            - 4000:8000
+        command: python -m http.server 8000
+    
