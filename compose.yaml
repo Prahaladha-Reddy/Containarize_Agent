@@ -1,7 +1,27 @@
 services:
-    app_1:
+    frontend:
       build:
-        context: .
-        dockerfile: Dockerfile
+        context: ./static_html
+        dockerfile: static.Dockerfile
       ports:
         - 8000:8000
+      volumes:
+        - ./static_html/src:/app
+    backend:
+      build:
+        context: ./backend
+        dockerfile: Dockerfile
+      ports:
+        - 8001:8001
+      command: uvicorn main:app --host 0.0.0.0 --port 8001 --reload
+      volumes:
+        - ./backend/src:/app
+      develop:
+        watch:
+          - action: rebuild
+            path: backend/requirements.txt
+          - action: rebuild
+            path: backend/Dockerfile
+          - action: sync+restart
+            path: backend/src/
+            target: /app
