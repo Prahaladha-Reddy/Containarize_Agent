@@ -30,3 +30,17 @@ services:
           - action: sync+restart
             path: backend/src/
             target: /app
+      depends_on:
+        - db_service
+    db_service:
+      image: postgres:17.5
+      ports:
+        - "5432:5432"
+      volumes:
+        - dc_managed_db_data:/var/lib/postgresql/data
+      env_file:
+        - .env.example_db
+
+
+volumes:
+  dc_managed_db_data:
