@@ -14,6 +14,11 @@ services:
       ports:
         - 8001:8001
       command: uvicorn main:app --host 0.0.0.0 --port 8001 --reload
+      environment:
+        - PORT=8000
+        - MY_PROJECT_NAME=containarize_agent
+      env_file:
+        - .env
       volumes:
         - ./backend/src:/app
       develop:
