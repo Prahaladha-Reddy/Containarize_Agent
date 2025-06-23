@@ -6,3 +6,5 @@ class EmailMessage(BaseModel):
     contents: str = Field(description="The contents of the email")
     invalid_requests: bool | None = Field(default=None, description="Whether the email is invalid")
 
+class SupervisorMessageSchema(BaseModel):
+    content: str

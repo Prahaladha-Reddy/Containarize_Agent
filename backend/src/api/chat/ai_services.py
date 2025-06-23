@@ -1,7 +1,8 @@
 import os
 from langchain_openai import ChatOpenAI
 from pydantic import BaseModel , Field
-
+from dotenv import load_dotenv
+load_dotenv()
 
 OPENAI_MODEL_NAME=os.getenv("OPENAI_MODEL_NAME")
 OPENAI_BASE_URL=os.getenv("OPENAI_BASE_URL")

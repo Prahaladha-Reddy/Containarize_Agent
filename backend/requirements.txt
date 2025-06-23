@@ -2,7 +2,10 @@ fastapi==0.115.12
 uvicorn[standard]
 sqlmodel
 psycopg[binary]
+langchain-core>=0.2.0
+langchain-openai>=0.1.7
 langchain
 langchain-community
-langchain-openai
 python-dotenv
+langgraph
+langgraph-supervisor
