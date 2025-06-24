@@ -118,7 +118,7 @@ Containarize_Agent/
 ### 2. Clone & Configure
 
 ```bash
-git clone https://github.com/<your-username>/Containarize_Agent.git
+git clone https://github.com/Prahaladha-Reddy/Containarize_Agent.git
 cd Containarize_Agent
 
 cp .env.example_db .env
