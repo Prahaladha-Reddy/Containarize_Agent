@@ -118,8 +118,8 @@ Containarize_Agent/
 ### 2. Clone & Configure
 
 ```bash
-git clone https://github.com/Prahaladha-Reddy/Containarize_Agent.git
-cd Containarize_Agent
+git clone https://github.com/Prahaladha-Reddy/Email_Management_Agent.git
+cd Email_Management_Agent
 
 cp .env.example_db .env
 cp backend/.env.example_db backend/.env
