@@ -1,4 +1,4 @@
-# Email MAnagemsnt MultiAgent System
+# Email Managemsnt MultiAgent System
 
 An AI-powered, fully containerized microservice stack that combines **FastAPI**, **LangGraph**, **SQLModel**, **PostgreSQL**, and a self-hosted **Gemma 3 model**. It orchestrates intelligent agents to perform research, generate content, and handle email automation—all with a single `docker compose up`.
 
